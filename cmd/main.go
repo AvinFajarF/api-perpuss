@@ -35,6 +35,6 @@ func main() {
 	userUsecase := usecase.NewUserUsecase(userRepository)
 	userHandler := http.NewUserHandler(&userUsecase)
 
-	router := server.NewRouter(userHandler)
+	router := server.NewRouterUser(userHandler)
 	router.Run()
 }

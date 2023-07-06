@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func NewRouter (UserHandler *http.UserHandler) *gin.Engine{
+func NewRouterUser (UserHandler *http.UserHandler) *gin.Engine{
 
 	router := gin.Default()
 
