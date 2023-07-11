@@ -6,3 +6,4 @@ golangci-lint run
             go fmt .
             golangci-lint run
     
+go test -v ./...
