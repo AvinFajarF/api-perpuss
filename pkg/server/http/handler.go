@@ -59,6 +59,7 @@ func (h *UserHandler) CreateUser(c *gin.Context) {
 	result, err := h.userUsecase.CreateUser(user.Username, hashedPasswordString, user.Alamat, user.Email, user.NomorTelepon)
 
 	if err != nil {
+		
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
