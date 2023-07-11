@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func NewRouterUser (UserHandler *http.UserHandler) *gin.Engine{
+func NewRouterUser (UserHandler *http.UserHandler, BookHandler *http.BookHandler) *gin.Engine{
 
 	router := gin.Default()
 
@@ -13,6 +13,7 @@ func NewRouterUser (UserHandler *http.UserHandler) *gin.Engine{
 
 	v1.POST("/register", UserHandler.CreateUser)
 	v1.POST("/login", UserHandler.Login)
+	
 
 
 	return router

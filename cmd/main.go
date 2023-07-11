@@ -31,10 +31,16 @@ func main() {
 
 
 
+	// user
 	userRepository := repository.NewPostgresUserRepository(db)
 	userUsecase := usecase.NewUserUsecase(userRepository)
 	userHandler := http.NewUserHandler(&userUsecase)
 
-	router := server.NewRouterUser(userHandler)
+	// book
+	bookRepository := repository.NewPostgresUserRepository(db)
+	bookUsecase := usecase.NewBookUsecase(bookRepository)
+	bookHandler := http.NewBookHandler(&bookUsecase)
+
+	router := server.NewRouterUser(userHandler, bookHandler)
 	router.Run()
 }

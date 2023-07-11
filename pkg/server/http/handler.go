@@ -15,12 +15,22 @@ import (
 type UserHandler struct {
 	userUsecase usecase.UserUsecase
 }
+type BookHandler struct {
+	bookUsecase usecase.BookUsecase
+}
 
 func NewUserHandler(userUsecase usecase.UserUsecase) *UserHandler {
 	return &UserHandler{
 		userUsecase: userUsecase,
 	}
 }
+
+func NewBookHandler(bookUsecase usecase.BookUsecase) *BookHandler {
+	return &BookHandler{
+		bookUsecase: bookUsecase,
+	}
+}
+
 
 func (h *UserHandler) CreateUser(c *gin.Context) {
 	var user struct {

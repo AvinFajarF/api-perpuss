@@ -1,8 +1,0 @@
-FROM postgres
-
-ENV POSTGRES_PASSWORD=root
-ENV POSTGRES_USER=root
-
-EXPOSE 5432
-
-CMD ["docker", "run", "--name", "postgres", "-e", "POSTGRES_PASSWORD=root", "-e", "POSTGRES_USER=root", "-p", "5432:5432", "-d", "postgres"]
