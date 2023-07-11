@@ -7,3 +7,9 @@ golangci-lint run
             golangci-lint run
     
 go test -v ./...
+golangci-lint run
+
+            go fmt .
+     go test -v ./..
+    
+golangci-lint run

@@ -51,7 +51,7 @@ func TestCreateUser(t *testing.T) {
 
 	// Assertions
 	assert.NoError(t, err)
-	assert.NotEqual(t, expectedUser, createdUser)
+	assert.Equal(t, expectedUser, createdUser)
 
 	mockRepo.AssertCalled(t, "Save", expectedUser)
 }
