@@ -12,7 +12,7 @@ type BookUsecase interface {
 	Delete(id int) error
 }
 
-type bookUsecas struct {
+type bookUsecase struct {
     repo repository.BookRepository
 }
 
